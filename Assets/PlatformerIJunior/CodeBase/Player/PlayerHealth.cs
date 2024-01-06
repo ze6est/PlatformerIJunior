@@ -1,23 +1,10 @@
-using UnityEngine;
-
-public class PlayerHealth : MonoBehaviour
+public class PlayerHealth : Health
 {
-    [SerializeField] private PlayerAnimations _animations;
-    [SerializeField] private int _max = 5;
-
-    [SerializeField] private int _current;
-
-    private void Start()
+    public override void TakeDamage(int health)
     {
-        _current = _max;
-    }
+        base.TakeDamage(health);
 
-    public void ChangeHealth(int health)
-    {
-        if (_current <= 0)
-            return;
-
-        _current += health;
-        _animations.PlayHit();
+        if (Current <= 0)
+            Destroy(gameObject);
     }
 }

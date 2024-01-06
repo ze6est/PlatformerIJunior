@@ -3,6 +3,7 @@ using UnityEngine;
 public class AgentMoveToPlayer : MonoBehaviour
 {
     [SerializeField] private Transform _playerTransform;
+    [SerializeField] private SpriteRenderer _sprite;
     [SerializeField] private ObstacleChecker _obstacleChecker;
     [SerializeField] private float _speed = 1f;
     [SerializeField] private float _minimalDistance = 0.5f;

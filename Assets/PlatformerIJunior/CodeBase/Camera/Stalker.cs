@@ -6,6 +6,7 @@ public class Stalker : MonoBehaviour
 
     private void LateUpdate()
     {
-        transform.position = new Vector3 (_target.position.x, transform.position.y, transform.position.z);
+        if (_target != null)
+            transform.position = new Vector3 (_target.position.x, transform.position.y, transform.position.z);
     }
 }

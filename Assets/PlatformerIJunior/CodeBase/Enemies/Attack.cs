@@ -48,7 +48,7 @@ public class Attack : MonoBehaviour
     {
         if (Hit(out Collider2D hit))
         {
-            hit.transform.GetComponent<PlayerHealth>().ChangeHealth(-_damage);
+            hit.transform.GetComponent<PlayerHealth>().TakeDamage(_damage);
         }
     }
 

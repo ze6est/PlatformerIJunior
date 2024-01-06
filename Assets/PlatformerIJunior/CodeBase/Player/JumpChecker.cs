@@ -1,9 +1,5 @@
 using Nomnom.RaycastVisualization;
 using UnityEngine;
-using UnityEngine.UIElements;
-
-
-
 
 [RequireComponent(typeof(CapsuleCollider2D))]
 public class JumpChecker : MonoBehaviour

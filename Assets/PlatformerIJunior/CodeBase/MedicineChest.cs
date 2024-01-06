@@ -8,7 +8,7 @@ public class MedicineChest : MonoBehaviour
     {
         if (collision.TryGetComponent(out PlayerHealth playerHealth))
         {
-            playerHealth.ChangeHealth(_healing);
+            playerHealth.Heal(_healing);
             Destroy(gameObject);
         }
     }
