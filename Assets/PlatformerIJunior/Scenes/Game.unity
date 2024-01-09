@@ -9774,6 +9774,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8375803442871706222, guid: 522ae4d1f2d702b4b8c1c5f2846c6d5e, type: 3}
+      propertyPath: m_Value
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9957,6 +9961,7 @@ GameObject:
   - component: {fileID: 1863650320}
   - component: {fileID: 1863650323}
   - component: {fileID: 1863650324}
+  - component: {fileID: 1863650325}
   m_Layer: 6
   m_Name: Player
   m_TagString: Untagged
@@ -10215,7 +10220,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _animations: {fileID: 1863650318}
-  _max: 5
+  _max: 100
+--- !u!114 &1863650325
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1863650310}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9a11b44f026dbd49bbc809cfd735fcf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _health: {fileID: 1863650324}
+  _collisions:
+    serializedVersion: 2
+    m_Bits: 4096
+  _radius: 2
+  _healthInDelay: 1
+  _duration: 6
+  _delay: 1
 --- !u!1001 &2018147878
 PrefabInstance:
   m_ObjectHideFlags: 0

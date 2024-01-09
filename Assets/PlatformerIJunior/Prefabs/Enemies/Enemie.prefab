@@ -1030,7 +1030,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _animations: {fileID: 4774527937246461993}
-  _max: 5
+  _max: 50
 --- !u!1 &7607098201843923904
 GameObject:
   m_ObjectHideFlags: 0

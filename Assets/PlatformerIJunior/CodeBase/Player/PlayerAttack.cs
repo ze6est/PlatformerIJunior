@@ -4,12 +4,7 @@ public class PlayerAttack : MonoBehaviour
 {
     [SerializeField] private int _damage;    
 
-    private bool _damageIsDone = false;    
-
-    private void OnCollisionExit2D(Collision2D collision)
-    {
-        _damageIsDone = false;
-    }
+    private bool _damageIsDone = false;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {

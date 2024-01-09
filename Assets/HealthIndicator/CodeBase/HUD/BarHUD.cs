@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 public class BarHUD : HealthHUD
 {
-    [SerializeField] Slider _slider;
+    [SerializeField] private Slider _slider;
 
     private void Start() => 
         _slider.maxValue = MaxHealth;
