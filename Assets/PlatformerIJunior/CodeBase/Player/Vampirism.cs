@@ -9,36 +9,24 @@ public class Vampirism : MonoBehaviour
     [SerializeField] private float _radius = 2;
     [SerializeField] private int _healthInDelay;
     [SerializeField] private float _duration = 6;
-    [SerializeField] private float _delay = 1;
+    [SerializeField] private float _delay = 0.5f;
 
     private RaycastHit2D[] _hit = new RaycastHit2D[1];
     private Coroutine _takeHealthJob;
-    private Health _enemieHealth;
+    private EnemieHealth _enemyHealth;
     private bool _isVampirism;
-    private bool _abilityIsReady;
 
     private void Start()
     {
-        _abilityIsReady = true;
+        _isVampirism = true;
     }
 
     private void Update()
     {
-        int hitCount = VisualPhysics2D.CircleCastNonAlloc(transform.position, _radius, Vector3.zero, _hit, _collisions);
-
-        if (hitCount > 0)
-        {
-            _isVampirism = true;
-            _enemieHealth = _hit[0].transform.GetComponent<Health>();
-        }
-        else
+        if (Input.GetKeyDown(KeyCode.LeftControl) && _isVampirism)
         {
             _isVampirism = false;
-            StopTakeHealth();
-        }
 
-        if (Input.GetKeyDown(KeyCode.LeftControl) && _isVampirism && _abilityIsReady)
-        {
             StopTakeHealth();
 
             _takeHealthJob = StartCoroutine(TakeHealth());            
@@ -47,8 +35,6 @@ public class Vampirism : MonoBehaviour
 
     private IEnumerator TakeHealth()
     {
-        _abilityIsReady = false;
-
         float duration = _duration;
 
         WaitForSeconds waitTime = new WaitForSeconds(_delay);
@@ -56,17 +42,23 @@ public class Vampirism : MonoBehaviour
         while (duration > 0)
         {
             duration -= _delay;
+            int hitCount = VisualPhysics2D.CircleCastNonAlloc(transform.position, _radius, Vector3.zero, _hit, _collisions);            
 
-            if(_enemieHealth != null)
+            if (hitCount > 0)
             {
-                _enemieHealth.TakeDamage(_healthInDelay);
-                _health.Heal(_healthInDelay);
+                _enemyHealth = _hit[0].transform.GetComponent<EnemieHealth>();
+
+                if(_enemyHealth != null )
+                {
+                    _enemyHealth.TakeDamage(_healthInDelay);
+                    _health.Heal(_healthInDelay);
+                }                                                
             }            
 
             yield return waitTime;
         }
 
-        _abilityIsReady = true;
+        _isVampirism = true;
     }
 
     private void StopTakeHealth()

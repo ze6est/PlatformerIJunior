@@ -499,7 +499,7 @@ MonoBehaviour:
   _collisions:
     serializedVersion: 2
     m_Bits: 64
-  _damage: 1
+  _damage: 10
   _attackCooldown: 2.5
   _offsetX: 1
   _offsetY: 0
@@ -765,7 +765,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c57146d394a5ff2459f6b872a6b05a30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _health: {fileID: 7887315774368948097}
+  _health: {fileID: 5798855866389815218}
   _slider: {fileID: 310292074854367258}
   _step: 1
 --- !u!114 &6138373780986829121
@@ -934,7 +934,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1473863104246846738}
   - component: {fileID: 4775249759526942419}
-  - component: {fileID: 7887315774368948097}
   - component: {fileID: 5798855866389815218}
   m_Layer: 12
   m_Name: HealthZone
@@ -1003,20 +1002,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.5080185, y: 0.115479946}
   m_EdgeRadius: 0
---- !u!114 &7887315774368948097
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6772232547218277119}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 05814a623bb09de4aa9393ed38934d20, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _animations: {fileID: 4774527937246461993}
-  _max: 5
 --- !u!114 &5798855866389815218
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1131,7 +1116,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8191415853000178623}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.09, y: 0, z: 0}
+  m_LocalPosition: {x: -2.53, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

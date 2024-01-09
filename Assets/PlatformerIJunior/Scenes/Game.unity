@@ -2033,6 +2033,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7975716491769901218, guid: 4fb2a4cdade41144e8dbaf34aee098c5, type: 3}
   m_PrefabInstance: {fileID: 1213451669}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1099525284 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5798855866389815218, guid: 4fb2a4cdade41144e8dbaf34aee098c5, type: 3}
+  m_PrefabInstance: {fileID: 1829497255}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05814a623bb09de4aa9393ed38934d20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1100796217
 GameObject:
   m_ObjectHideFlags: 0
@@ -9671,6 +9682,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 1863650313}
     m_Modifications:
     - target: {fileID: -5672336950090868916, guid: 522ae4d1f2d702b4b8c1c5f2846c6d5e, type: 3}
+      propertyPath: _step
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: -5672336950090868916, guid: 522ae4d1f2d702b4b8c1c5f2846c6d5e, type: 3}
       propertyPath: _health
       value: 
       objectReference: {fileID: 1863650324}
@@ -9888,10 +9903,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemie2
       objectReference: {fileID: 0}
-    - target: {fileID: 7908103505463970068, guid: 4fb2a4cdade41144e8dbaf34aee098c5, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -2.53
-      objectReference: {fileID: 0}
+    - target: {fileID: 7153662553474849888, guid: 4fb2a4cdade41144e8dbaf34aee098c5, type: 3}
+      propertyPath: _health
+      value: 
+      objectReference: {fileID: 1099525284}
     - target: {fileID: 7975716491769901218, guid: 4fb2a4cdade41144e8dbaf34aee098c5, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -10238,7 +10253,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4096
   _radius: 2
-  _healthInDelay: 1
+  _healthInDelay: 3
   _duration: 6
   _delay: 1
 --- !u!1001 &2018147878
